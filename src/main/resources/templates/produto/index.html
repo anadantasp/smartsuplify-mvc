@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://kit.fontawesome.com/694bd12192.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Produtos</title>
+	</head>
+	<body>
+		<header>
+			<h1>Gerenciamento de Produtos</h1>
+			<p>Faça aqui o gerenciamento de produtos da sua empresa</p>
+		</header>
+		<main>
+			<a href="produtos/new">Adicionar Produto</a>
+			<div th:if="${message != null}">
+				<p th:text="${message}"></p>
+			</div>
+			<table>
+				<thead>
+					<tr>
+						<th class="id">ID</th>
+						<th class="name">Nome</th>
+						<th class="size">Tamanho</th>
+						<th class="actions"></th>
+					</tr>
+				</thead>
+				<tbody th:each="produto : ${produtos}">
+					<tr>
+						<td class="id" th:text="${produto.id}"></td>
+						<td class="name" th:text="${produto.nome}"></td>
+						<td class="size" th:text="${produto.tamanho}"></td>
+						<td class="actions">
+							<i class="fa-solid fa-pen-to-square"></i>
+							<a th:href="${'produtos/delete/' + produto.id}"><i class="fa-solid fa-trash"></i></a>
+						</td>
+					</tr>
+					<!-- Repetir para outros produtos -->
+				</tbody>
+			</table>
+		</main>
+	</body>
+</html>

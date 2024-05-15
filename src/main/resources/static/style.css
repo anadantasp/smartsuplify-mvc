@@ -1,0 +1,144 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: "Montserrat";
+	box-sizing: border-box;
+}
+
+header {
+	width: 100%;
+	background-color: #143040;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	padding: 64px 40px;
+	line-height: 32px;
+}
+
+header > h1 {
+	color: #6e9c54;
+	font-size: 2.5em;
+}
+
+header > p {
+	color: #dadada;
+	font-size: 1.2em;
+    width: 80%;
+}
+
+body {
+	background-color: #000000;
+	color: #fff;
+}
+
+main,
+form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 64px 40px;
+	gap: 32px;
+}
+
+main > a,
+form > .buttons > .salvar {
+	padding: 12px 0;
+	border: 4px solid #143040;
+	background-color: #143040;
+	font-size: 1.2em;
+	cursor: pointer;
+	color: #fff;
+	border-radius: 4px;
+	text-align: center;
+	transition: 0.2s;
+}
+
+main > a:hover,
+form > .buttons > .salvar:hover {
+	background-color: unset;
+}
+
+main > table {
+	border-collapse: collapse;
+	text-align: justify;
+}
+
+main > table > thead > tr {
+	height: 60px;
+	color: #6e9c54;
+	font-size: 1.2em;
+}
+
+main > table > tbody > tr {
+	height: 45px;
+}
+
+main > table > thead > tr > .id,
+main > table > tbody > tr > .id {
+	width: 10%;
+}
+
+main > table > thead > tr > .name,
+main > table > tbody > tr > .name {
+	width: 50%;
+}
+
+main > table > thead > tr > .size,
+main > table > tbody > tr > .size {
+	width: 30%;
+}
+
+main > table > thead > tr > .actions,
+main > table > tbody > tr > .actions {
+	text-align: right;
+	width: 10%;
+}
+
+main > table > tbody > tr > .actions > i {
+	padding: 8px 12px;
+	font-size: 20px;
+	cursor: pointer;
+	color: #6e9c54;
+}
+
+form {
+	gap: 40px;
+}
+
+form > .campos-input {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+form > .campos-input > label {
+	font-size: 1.2em;
+}
+
+form > .campos-input > input {
+	font-size: 1em;
+	padding: 16px 12px;
+	outline: none;
+	border-radius: 4px;
+	font-weight: 500;
+}
+
+form > .buttons {
+	display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form > .buttons > .salvar {
+	border: 4px solid #436630;
+    background-color: #436630;
+    margin: 0 40px;
+}
+
+form > .buttons > .voltar {
+	text-align: center;
+    font-size: 1.1em;
+    color: #6e9c54;
+    font-weight: 500;
+}
