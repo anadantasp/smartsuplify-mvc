@@ -14,7 +14,7 @@
         <h1>Gerenciamento de Produtos</h1>
         <p>Bem-vindo à página de gerenciamento de produtos. Aqui você pode cadastrar novos produtos ou atualizar as informações dos produtos já existentes. Preencha os campos abaixo para adicionar ou modificar as informações de um produto. Certifique-se de que todas as informações estejam corretas antes de salvar.</p>
     </header>
-    <form action="/produtos" method="POST" th:object="${produto}">
+    <form th:action="${'/produtos'}" method="POST" th:object="${produto}">
         <div class="campos-input">
             <label for="nome">Nome</label>
             <input th:field="*{nome}" type="text" maxlength="80" placeholder="Parafuso">
