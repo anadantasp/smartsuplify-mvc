@@ -14,15 +14,17 @@
         <h1>Gerenciamento de Produtos</h1>
         <p>Bem-vindo à página de gerenciamento de produtos. Aqui você pode cadastrar novos produtos ou atualizar as informações dos produtos já existentes. Preencha os campos abaixo para adicionar ou modificar as informações de um produto. Certifique-se de que todas as informações estejam corretas antes de salvar.</p>
     </header>
-    <form action="/produtos" method="POST">
+    <form action="/produtos" method="POST" th:object="${produto}">
         <div class="campos-input">
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" maxlength="80" placeholder="Parafuso">
+            <input th:field="*{nome}" type="text" maxlength="80" placeholder="Parafuso">
+            <span class="nes-text is-error" th:errors="*{nome}"></span>
         </div>
         
         <div class="campos-input">
             <label for="tamanho">Tamanho</label>
-            <input type="text" id="tamanho" name="tamanho" maxlength="20" placeholder="3x12mm">
+            <input th:field="*{tamanho}" type="text" maxlength="20" placeholder="3x12mm">
+            <span class="nes-text is-error" th:errors="*{tamanho}"></span>
         </div>
 
         <div class="buttons">
