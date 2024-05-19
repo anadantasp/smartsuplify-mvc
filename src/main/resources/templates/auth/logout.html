@@ -6,21 +6,24 @@
 		<script src="https://kit.fontawesome.com/694bd12192.js" crossorigin="anonymous"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="./style.css" />
 		<title>Produtos</title>
 	</head>
 	<body>
-        <header>
+		<header>
 			<h1>SmartSuplify</h1>
-			<p>Tem certeza que gostaria de sair do EpicTask?</p>
-
-    <a href="produtos">
-        voltar
-    </a>
-    <form th:action="${'/logout'}" method="post">
-        <button>sair</button>
-    </form>
+			<p>Tem certeza que gostaria de sair?</p>
 		</header>
-    </body>
+
+		<div class="body-screen">
+			<a href="produtos" class="btn-voltar-logout"> voltar </a>
+			<form th:action="${'/logout'}" method="post" class="form-sair">
+				<button class="btn-sair-logout">sair</button>
+			</form>
+		</div>
+	</body>
 </html>

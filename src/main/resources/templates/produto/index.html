@@ -14,7 +14,6 @@
 		<header>
 			<h1>Gerenciamento de Produtos</h1>
 			<p>Faça aqui o gerenciamento de produtos da sua empresa</p>
-			<a href="/logout" class="nes-btn">sair</a>
 		</header>
 		<main>
 			<a href="produtos/new">Adicionar Produto</a>
@@ -40,9 +39,9 @@
 							<a th:href="${'produtos/delete/' + produto.id}"><i class="fa-solid fa-trash"></i></a>
 						</td>
 					</tr>
-					<!-- Repetir para outros produtos -->
 				</tbody>
 			</table>
+			<a href="/logout" class="btn-sair">Sair</a>
 		</main>
 	</body>
 </html>
